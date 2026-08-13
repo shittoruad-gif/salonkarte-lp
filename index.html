@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サロンカルテ｜予約・電子カルテ・物販・LINEをひとつに 月額1万9,800円（税込・全機能込み）【株式会社しっとる】</title>
+<meta name="description" content="整骨院・整体院・鍼灸院・サロン向けの予約・カルテ管理システム「サロンカルテ」。LINEの予約漏れ検知・カルテ書き忘れ防止・物販の再提案まで、月額1万9,800円（税込・全機能込み）。無料デモ実施中。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="サロンカルテ｜予約もカルテも物販も、院の仕事をひとつに">
+<meta property="og:description" content="LINEの予約漏れ検知・カルテ書き忘れ防止・物販の再提案まで。月額1万9,800円（税込・全機能込み）。無料デモ実施中。">
+<meta property="og:site_name" content="株式会社しっとる">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/shittoru_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep-950:#07222B;
+  --deep-900:#0E2A38;
+  --deep-800:#123C49;
+  --deep-700:#0C6D73;
+  --teal:#0E8388;
+  --teal-soft:#E6F2F3;
+  --orange:#F08A2E;
+  --orange-dark:#D97A22;
+  --orange-soft:#FCCB96;
+  --ink:#13343B;
+  --gray-600:#4C6B67;
+  --gray-100:#F4FAFA;
+  --line:#E1EAEA;
+  --white:#FFFFFF;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(14,42,56,.10);
+  --maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans JP",sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  background:linear-gradient(180deg,#FA9E44,var(--orange));
+  color:#fff;font-weight:700;
+  padding:1.05em 2.4em;border-radius:999px;
+  box-shadow:0 8px 24px rgba(240,138,46,.38);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+  text-align:center;line-height:1.5;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(240,138,46,.45);filter:brightness(1.04)}
+.btn .arrow{display:inline-block;transition:transform .2s ease}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn--lg{font-size:1.15rem;padding:1.2em 3em}
+.btn-note{margin-top:14px;font-size:.82rem;color:var(--gray-600)}
+.btn-note--onDark{color:rgba(255,255,255,.65)}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(7,34,43,.85);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-mark{
+  width:44px;height:44px;border-radius:12px;flex:none;
+  background:#fff;padding:5px;
+  display:grid;place-items:center;
+}
+.brand-mark img{width:100%;height:100%;object-fit:contain;display:block}
+.brand-tag{font-size:.68rem;letter-spacing:.28em;color:rgba(255,255,255,.72)}
+.brand-name{font-weight:900;font-size:1.2rem;line-height:1.3}
+.brand-name small{font-size:.62em;font-weight:500;color:rgba(255,255,255,.75);margin-right:.2em}
+.footer-logo{
+  width:76px;height:auto;background:#fff;border-radius:18px;padding:9px;margin-bottom:4px;
+}
+.header-cta{font-size:.92rem;padding:.75em 1.6em;box-shadow:0 4px 14px rgba(240,138,46,.4)}
+@media(max-width:560px){
+  .brand-tag{display:none}
+  .brand-name{font-size:1.05rem}
+  .header-cta{font-size:.8rem;padding:.7em 1.1em}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;color:#fff;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(240,138,46,.14), transparent 60%),
+    radial-gradient(700px 420px at -10% 110%, rgba(12,109,115,.55), transparent 60%),
+    linear-gradient(160deg,var(--deep-950) 0%,var(--deep-900) 60%,#0F3240 100%);
+  padding:150px 0 90px;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+.hero .wrap{position:relative;z-index:1}
+.hero-badge{
+  display:inline-block;background:var(--orange);color:#fff;font-weight:700;
+  padding:.45em 1.3em;font-size:.98rem;
+  clip-path:polygon(0 0,100% 0,calc(100% - 14px) 100%,0 100%);
+  margin-bottom:28px;
+}
+.hero h1{
+  font-size:clamp(1.7rem,4vw,2.9rem);font-weight:900;line-height:1.45;
+  letter-spacing:.01em;margin-bottom:30px;
+}
+.hero-flip{
+  display:inline-block;background:#fff;color:var(--ink);
+  font-size:clamp(1.2rem,3vw,1.9rem);font-weight:900;
+  padding:.55em 1em;border-radius:6px;position:relative;margin-bottom:40px;
+}
+.hero-flip::after{
+  content:"";position:absolute;left:34px;bottom:-14px;
+  border:8px solid transparent;border-top:8px solid #fff;border-left:8px solid #fff;
+}
+.hero-flip .marker{
+  background:linear-gradient(transparent 55%,var(--orange-soft) 55%);
+  padding:0 .08em;
+}
+.flip-br{display:block}
+.hero-sub{font-size:clamp(1rem,2.2vw,1.25rem);font-weight:500;color:rgba(255,255,255,.9)}
+.hero-price{
+  display:flex;align-items:baseline;flex-wrap:wrap;gap:.15em;
+  margin:6px 0 30px;font-weight:900;
+}
+.hero-price .label{font-size:clamp(1.2rem,3vw,1.8rem)}
+.hero-price .num{
+  font-size:clamp(3.2rem,9vw,5.8rem);line-height:1;color:var(--orange);
+  letter-spacing:-.02em;text-shadow:0 6px 30px rgba(240,138,46,.35);
+}
+.hero-price .num .man{font-size:.55em;font-weight:900}
+.hero-price .unit{font-size:clamp(1.3rem,3.4vw,2rem)}
+.hero-price .tax{font-size:.9rem;font-weight:500;color:rgba(255,255,255,.7);margin-left:.6em}
+.hero-stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+.stat{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  border-radius:14px;padding:14px 22px;text-align:center;min-width:150px;
+}
+.stat .t{font-size:.8rem;color:rgba(255,255,255,.75)}
+.stat .v{font-size:1.4rem;font-weight:900;color:var(--orange-soft);line-height:1.3}
+.stat .v small{font-size:.62em;color:rgba(255,255,255,.85);font-weight:700}
+
+/* ---------- illustrations ---------- */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero-visual{display:flex;justify-content:center}
+.hero-visual svg{width:min(340px,88%);height:auto;filter:drop-shadow(0 26px 50px rgba(0,0,0,.5))}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{margin-top:36px}
+  .hero-visual svg{width:min(260px,72%)}
+}
+.card-illust{display:block;width:100%;height:auto;margin-bottom:20px;border-radius:12px}
+.report-illust{max-width:820px;margin:40px auto 0}
+.report-illust svg{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* ---------- sections common ---------- */
+section{padding:96px 0}
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-num{
+  display:block;font-weight:900;color:var(--orange);letter-spacing:.18em;
+  font-size:.95rem;margin-bottom:10px;
+}
+.sec-num::after{
+  content:"";display:block;width:34px;height:3px;background:var(--orange);
+  margin:12px auto 0;border-radius:2px;
+}
+.sec-title{font-size:clamp(1.5rem,3.6vw,2.2rem);font-weight:900;line-height:1.5;letter-spacing:.02em}
+.sec-lead{max-width:760px;margin:22px auto 0;color:var(--gray-600);font-size:1.02rem}
+.on-dark{color:#fff}
+.on-dark .sec-title{color:#fff}
+.on-dark .sec-lead{color:rgba(255,255,255,.78)}
+.center{text-align:center}
+.small-note{font-size:.82rem;color:var(--gray-600)}
+.small-note--onDark{color:rgba(255,255,255,.6)}
+
+/* ---------- 01 悩み ---------- */
+.sec-nayami{background:var(--white)}
+.nayami-list{max-width:760px;margin:0 auto;display:grid;gap:16px}
+.nayami-item{
+  display:flex;align-items:center;gap:18px;
+  background:var(--gray-100);border-radius:var(--radius);padding:22px 26px;
+  font-weight:700;font-size:1.05rem;border:1px solid var(--line);
+}
+.nayami-item .check{
+  flex:none;width:34px;height:34px;border-radius:50%;
+  background:var(--orange);color:#fff;display:grid;place-items:center;
+  font-size:1rem;font-weight:900;box-shadow:0 4px 12px rgba(240,138,46,.35);
+}
+.nayami-close{
+  text-align:center;margin-top:38px;font-weight:700;font-size:1.12rem;
+}
+.nayami-close .marker{background:linear-gradient(transparent 60%,#FBDDBA 60%)}
+
+/* ---------- 02 放置リスク ---------- */
+.sec-risk{background:linear-gradient(165deg,var(--deep-900),var(--deep-800))}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:860px){.cards3{grid-template-columns:1fr}}
+.risk-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);padding:34px 28px;
+}
+.risk-card .icon{
+  width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+  background:rgba(240,138,46,.15);border:1px solid rgba(240,138,46,.35);
+  font-size:1.5rem;margin-bottom:20px;
+}
+.risk-card h3{font-size:1.12rem;font-weight:900;margin-bottom:12px;color:#fff}
+.risk-card p{font-size:.95rem;color:rgba(255,255,255,.78)}
+
+/* ---------- 03 原因 ---------- */
+.sec-cause{background:var(--white)}
+.cause-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+@media(max-width:860px){.cause-grid{grid-template-columns:1fr}}
+.cause-card{
+  border:1px solid var(--line);border-left:6px solid var(--orange);
+  border-radius:var(--radius);padding:34px 30px;background:#fff;box-shadow:var(--shadow);
+}
+.cause-card .tag{
+  display:inline-block;background:var(--deep-900);color:#fff;font-weight:700;
+  font-size:.85rem;padding:.35em 1em;border-radius:999px;margin-bottom:16px;
+}
+.cause-card h3{font-size:1.25rem;font-weight:900;margin-bottom:14px}
+.cause-card p{color:var(--gray-600);font-size:.98rem}
+.cause-card p strong{color:var(--ink)}
+
+/* ---------- 04 解決 ---------- */
+.sec-solution{background:linear-gradient(170deg,var(--deep-950),var(--deep-900) 70%,#10404A)}
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:860px){.sol-grid{grid-template-columns:1fr}}
+.sol-card{
+  background:#fff;border-radius:var(--radius);padding:38px 32px;color:var(--ink);
+  position:relative;box-shadow:0 16px 40px rgba(0,0,0,.3);
+}
+.sol-card .num{
+  position:absolute;top:-18px;left:26px;
+  background:var(--orange);color:#fff;font-weight:900;
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  font-size:1.15rem;box-shadow:0 6px 16px rgba(240,138,46,.45);
+}
+.sol-card h3{font-size:1.25rem;font-weight:900;margin:10px 0 14px;line-height:1.5}
+.sol-card h3 .accent{color:var(--teal)}
+.sol-card p{color:var(--gray-600);font-size:.98rem}
+
+/* ---------- 機能一覧 ---------- */
+.sec-features{background:var(--gray-100)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.feature-grid{grid-template-columns:1fr}}
+.feature-card{
+  background:#fff;border-radius:var(--radius);padding:30px 26px;
+  border:1px solid var(--line);box-shadow:var(--shadow);
+}
+.feature-card .fico{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  background:var(--teal-soft);margin-bottom:16px;
+}
+.feature-card .fico svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feature-card h3{font-size:1.08rem;font-weight:900;margin-bottom:10px}
+.feature-card p{font-size:.92rem;color:var(--gray-600)}
+
+/* ---------- 導入後 ---------- */
+.sec-after{background:var(--white)}
+.after-list{max-width:820px;margin:0 auto;display:grid;gap:22px}
+.after-item{
+  background:var(--gray-100);border-radius:var(--radius);padding:32px 34px;
+  border:1px solid var(--line);display:flex;gap:22px;align-items:flex-start;
+}
+@media(max-width:640px){.after-item{flex-direction:column;gap:12px}}
+.after-item .no{
+  flex:none;font-weight:900;font-size:2rem;color:var(--orange);line-height:1;
+  padding-top:4px;
+}
+.after-item h3{font-size:1.15rem;font-weight:900;margin-bottom:8px}
+.after-item p{color:var(--gray-600);font-size:.96rem}
+
+/* ---------- 実測 ---------- */
+.sec-results{background:linear-gradient(165deg,var(--deep-900),var(--deep-800))}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
+@media(max-width:860px){.results-grid{grid-template-columns:1fr}}
+.result-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);padding:36px 30px;text-align:center;
+}
+.result-card .label{font-size:.95rem;color:rgba(255,255,255,.75);font-weight:700;margin-bottom:10px}
+.result-card .num{
+  font-size:clamp(3rem,8vw,4.6rem);font-weight:900;color:var(--orange-soft);
+  line-height:1.1;letter-spacing:-.02em;
+}
+.result-card .num small{font-size:.4em;font-weight:700;color:rgba(255,255,255,.85)}
+.result-card .desc{font-size:.92rem;color:rgba(255,255,255,.78);margin-top:14px}
+.results-note{max-width:820px;margin:26px auto 0;font-size:.82rem;color:rgba(255,255,255,.55);text-align:center}
+
+/* ---------- 安心 ---------- */
+.sec-reason{background:var(--white)}
+.reason-card{
+  background:var(--gray-100);border-radius:var(--radius);padding:34px 30px;
+  border:1px solid var(--line);
+}
+.reason-card .badge{
+  display:inline-grid;place-items:center;width:48px;height:48px;border-radius:50%;
+  background:var(--deep-900);color:var(--orange-soft);font-weight:900;font-size:1.2rem;
+  margin-bottom:18px;
+}
+.reason-card h3{font-size:1.12rem;font-weight:900;margin-bottom:12px;line-height:1.6}
+.reason-card p{font-size:.95rem;color:var(--gray-600)}
+
+/* ---------- pricing ---------- */
+.sec-price{background:linear-gradient(165deg,var(--deep-950),var(--deep-900))}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto}
+@media(max-width:860px){.plan-grid{grid-template-columns:1fr;max-width:480px}}
+.plan-card{
+  background:#fff;border-radius:var(--radius);padding:36px 30px;color:var(--ink);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);position:relative;
+  display:flex;flex-direction:column;
+}
+.plan-card.is-featured{
+  background:linear-gradient(170deg,var(--deep-900),var(--deep-800));color:#fff;
+  border:1px solid rgba(240,138,46,.5);
+}
+.plan-card .pop{
+  position:absolute;top:-14px;right:22px;
+  background:var(--orange);color:#fff;font-size:.78rem;font-weight:700;
+  border-radius:999px;padding:.3em 1.2em;box-shadow:0 6px 16px rgba(240,138,46,.45);
+}
+.plan-card .pname{font-size:1.2rem;font-weight:900;margin-bottom:6px}
+.plan-card .pprice{font-weight:900;margin:8px 0 4px}
+.plan-card .pprice .yen{font-size:1.9rem;letter-spacing:-.01em;white-space:nowrap}
+.plan-card .pprice .per{font-size:.9rem;font-weight:500;color:var(--gray-600)}
+.plan-card.is-featured .pprice .yen{color:var(--orange-soft)}
+.plan-card.is-featured .pprice .per{color:rgba(255,255,255,.7)}
+.plan-card .pcap{font-size:.9rem;font-weight:700;color:var(--teal);margin-bottom:18px}
+.plan-card.is-featured .pcap{color:var(--orange-soft)}
+.plan-card ul{list-style:none;display:grid;gap:10px;font-size:.93rem;margin-bottom:8px}
+.plan-card ul li::before{content:"✓ ";color:var(--teal);font-weight:900}
+.plan-card.is-featured ul li::before{color:var(--orange-soft)}
+.plan-card.is-featured ul{color:rgba(255,255,255,.92)}
+.price-notes{
+  display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
+  max-width:1000px;margin:30px auto 0;
+}
+.price-note-chip{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  color:#fff;border-radius:12px;padding:12px 20px;font-size:.88rem;font-weight:700;
+}
+.price-note-chip small{display:block;font-weight:400;color:rgba(255,255,255,.65);font-size:.86em}
+.price-legal{max-width:900px;margin:20px auto 0;font-size:.82rem;color:rgba(255,255,255,.55);text-align:center}
+
+/* ---------- FAQ ---------- */
+.sec-faq{background:var(--gray-100)}
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:14px}
+details.faq{
+  background:#fff;border-radius:14px;box-shadow:var(--shadow);
+  overflow:hidden;border:1px solid var(--line);
+}
+details.faq summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;
+  padding:22px 24px;font-weight:700;font-size:1.02rem;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .q{
+  flex:none;width:32px;height:32px;border-radius:10px;background:var(--orange);
+  color:#fff;font-weight:900;display:grid;place-items:center;font-size:.95rem;
+}
+details.faq summary .toggle{
+  margin-left:auto;flex:none;color:var(--orange);font-size:1.3rem;font-weight:900;
+  transition:transform .25s ease;
+}
+details.faq[open] summary .toggle{transform:rotate(45deg)}
+details.faq .a{
+  padding:0 24px 24px 72px;color:var(--gray-600);font-size:.96rem;
+}
+@media(max-width:560px){details.faq .a{padding-left:24px}}
+
+/* ---------- final CTA ---------- */
+.sec-contact{
+  background:
+    radial-gradient(800px 400px at 50% -20%, rgba(240,138,46,.2), transparent 60%),
+    linear-gradient(170deg,var(--deep-950),var(--deep-900));
+  text-align:center;padding:110px 0;
+}
+.sec-contact h2{
+  color:#fff;font-size:clamp(1.7rem,4.4vw,2.6rem);font-weight:900;margin-bottom:24px;
+}
+.sec-contact .lead{
+  max-width:720px;margin:0 auto 42px;color:rgba(255,255,255,.82);font-size:1.02rem;
+}
+.form-steps{
+  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:42px;
+}
+.form-step{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  color:#fff;border-radius:12px;padding:12px 20px;font-size:.9rem;font-weight:700;
+  display:flex;align-items:center;gap:10px;
+}
+.form-step .n{
+  width:24px;height:24px;border-radius:50%;background:var(--orange);
+  display:grid;place-items:center;font-size:.78rem;flex:none;
+}
+.form-step.sep{background:none;border:none;padding:12px 0;color:var(--orange-soft);font-size:1.1rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--deep-950);color:rgba(255,255,255,.75);padding:56px 0;text-align:center}
+footer .brand{justify-content:center;margin-bottom:20px;flex-direction:column;gap:6px}
+footer .addr{font-size:.85rem;line-height:2}
+footer .copy{margin-top:22px;font-size:.78rem;color:rgba(255,255,255,.45)}
+.footer-contact{font-size:.88rem;margin-top:6px}
+.footer-contact a{color:var(--orange-soft);text-decoration:underline;text-underline-offset:3px}
+.footer-links{display:flex;gap:10px 26px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.footer-links a{color:rgba(255,255,255,.85);font-size:.85rem;text-decoration:underline;text-underline-offset:3px}
+.trademark{margin-top:18px;font-size:.72rem;color:rgba(255,255,255,.45);padding:0 12px}
+
+/* ---------- floating CTA (mobile) ---------- */
+.float-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;padding:12px 16px;
+  background:rgba(7,34,43,.9);backdrop-filter:blur(8px);
+  border-top:1px solid rgba(255,255,255,.1);
+  display:none;text-align:center;
+}
+.float-cta .btn{width:100%;max-width:420px;font-size:1rem;padding:.9em 1em}
+@media(max-width:640px){
+  .float-cta{display:block}
+  body{padding-bottom:76px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><img src="assets/shittoru_logo.png" alt="株式会社しっとる ロゴ"></span>
+      <span>
+        <span class="brand-tag">院運営をひとつに</span><br>
+        <span class="brand-name">サロンカルテ</span>
+      </span>
+    </a>
+    <a class="btn header-cta js-form-link" href="#" target="_blank" rel="noopener">無料デモを予約する</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-badge">整骨院・整体院・鍼灸院・サロン経営者様へ</span>
+        <h1>「LINEで約束した予約、<br>台帳に写し忘れてた…」</h1>
+        <div class="hero-flip">その取りこぼし、<br class="flip-br"><span class="marker">機械に拾わせて</span>ください。</div>
+        <p class="hero-sub">予約・電子カルテ・回数券・物販・公式LINEがひとつになって</p>
+        <div class="hero-price">
+          <span class="label">月額</span>
+          <span class="num">1<small class="man">万</small>9,800</span>
+          <span class="unit">円</span>
+          <span class="tax">（税込・全機能込み）</span>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="t">予約〜物販まで</div><div class="v">1つ<small>のシステム</small></div></div>
+          <div class="stat"><div class="t">自社サロン</div><div class="v">2店舗<small>で毎日実運用</small></div></div>
+        </div>
+        <div>
+          <a class="btn btn--lg js-form-link" href="#" target="_blank" rel="noopener">無料デモを予約する<span class="arrow">→</span></a>
+          <p class="btn-note btn-note--onDark">実際に動いている画面をオンラインでお見せします。しつこい営業は一切ありません</p>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif">
+          <defs>
+            <linearGradient id="hp-scr" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#123C49"/><stop offset="1" stop-color="#0E2A38"/>
+            </linearGradient>
+          </defs>
+          <!-- phone -->
+          <rect x="50" y="40" width="300" height="560" rx="46" fill="#061B22" stroke="#2C5560" stroke-width="3"/>
+          <rect x="63" y="53" width="274" height="534" rx="36" fill="url(#hp-scr)"/>
+          <rect x="160" y="66" width="80" height="10" rx="5" fill="#061B22"/>
+          <text x="80" y="110" fill="#fff" font-size="19" font-weight="bold">本日の予約</text>
+          <!-- booking rows -->
+          <g>
+            <rect x="78" y="128" width="244" height="64" rx="12" fill="rgba(255,255,255,.07)"/>
+            <rect x="78" y="128" width="6" height="64" rx="3" fill="#0E8388"/>
+            <rect x="96" y="142" width="60" height="12" rx="6" fill="rgba(255,255,255,.85)"/>
+            <rect x="96" y="164" width="120" height="10" rx="5" fill="rgba(255,255,255,.4)"/>
+            <rect x="252" y="146" width="58" height="24" rx="12" fill="rgba(14,131,136,.35)"/>
+          </g>
+          <g>
+            <rect x="78" y="202" width="244" height="64" rx="12" fill="rgba(255,255,255,.07)"/>
+            <rect x="78" y="202" width="6" height="64" rx="3" fill="#0E8388"/>
+            <rect x="96" y="216" width="76" height="12" rx="6" fill="rgba(255,255,255,.85)"/>
+            <rect x="96" y="238" width="100" height="10" rx="5" fill="rgba(255,255,255,.4)"/>
+            <rect x="252" y="220" width="58" height="24" rx="12" fill="rgba(14,131,136,.35)"/>
+          </g>
+          <!-- alert row -->
+          <g>
+            <rect x="78" y="276" width="244" height="72" rx="12" fill="rgba(240,138,46,.16)" stroke="#F08A2E" stroke-width="2"/>
+            <circle cx="104" cy="312" r="14" fill="#F08A2E"/>
+            <text x="99" y="318" fill="#fff" font-size="16" font-weight="bold">!</text>
+            <text x="128" y="304" fill="#FCCB96" font-size="13" font-weight="bold">LINEの予約漏れを検知</text>
+            <text x="128" y="326" fill="rgba(255,255,255,.75)" font-size="11.5">トークの約束が台帳にありません</text>
+          </g>
+          <!-- karte card -->
+          <g>
+            <rect x="78" y="362" width="244" height="88" rx="12" fill="rgba(255,255,255,.07)"/>
+            <rect x="96" y="378" width="90" height="11" rx="5.5" fill="rgba(255,255,255,.75)"/>
+            <rect x="96" y="400" width="200" height="8" rx="4" fill="rgba(255,255,255,.3)"/>
+            <rect x="96" y="416" width="170" height="8" rx="4" fill="rgba(255,255,255,.3)"/>
+            <rect x="222" y="371" width="86" height="24" rx="12" fill="#0E8388"/>
+            <text x="235" y="388" fill="#fff" font-size="11.5" font-weight="bold">カルテ記入</text>
+          </g>
+          <!-- progress -->
+          <rect x="78" y="470" width="244" height="6" rx="3" fill="rgba(255,255,255,.18)"/>
+          <rect x="78" y="470" width="176" height="6" rx="3" fill="#0E8388"/>
+          <!-- badge -->
+          <rect x="78" y="496" width="176" height="34" rx="17" fill="#F08A2E"/>
+          <text x="95" y="519" fill="#fff" font-size="14" font-weight="bold">そろそろ提案リスト 3件</text>
+          <!-- notification card -->
+          <g>
+            <rect x="118" y="6" width="262" height="66" rx="16" fill="#fff"/>
+            <circle cx="150" cy="39" r="15" fill="#22B573"/>
+            <path d="M143 39 L148 45 L158 33" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="176" y="34" fill="#13343B" font-size="15" font-weight="bold">仮予約を作成しました</text>
+            <text x="176" y="56" fill="#4C6B67" font-size="12">スタッフ確認待ちです</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 01 悩み ================= -->
+<section class="sec-nayami">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">こんなお悩み、ありませんか？</h2>
+    </div>
+    <div class="nayami-list">
+      <div class="nayami-item reveal"><span class="check">✔</span>LINEで「次は◯日で」と決めたのに、予約表への登録を忘れてしまう</div>
+      <div class="nayami-item reveal"><span class="check">✔</span>カルテを書くのが後回しになり、翌日には内容を思い出せない</div>
+      <div class="nayami-item reveal"><span class="check">✔</span>物販が売りっぱなしで、次の提案の一言が出てこない</div>
+      <div class="nayami-item reveal"><span class="check">✔</span>予約・カルテ・LINE・売上がバラバラで、同じ情報を何度も入力している</div>
+    </div>
+    <p class="nayami-close reveal">ひとつでも当てはまったら、<span class="marker">このページはきっとお役に立てます。</span></p>
+    <div class="center reveal" style="margin-top:34px">
+      <a class="btn js-form-link" href="#" target="_blank" rel="noopener">うちの院でも使える？と聞いてみる<span class="arrow">→</span></a>
+      <p class="btn-note">無料相談・オンライン対応。もちろん相談だけでもOKです</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 放置リスク ================= -->
+<section class="sec-risk on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">その取りこぼし、放置すると静かに積み重なります</h2>
+    </div>
+    <div class="cards3">
+      <div class="risk-card reveal">
+        <div class="icon">📉</div>
+        <h3>誰も気づかないまま失客する</h3>
+        <p>LINEの予約漏れは、当日お客様が来て初めて発覚します。気まずい思いをさせたお客様は、次から静かに来なくなります。</p>
+      </div>
+      <div class="risk-card reveal">
+        <div class="icon">⏰</div>
+        <h3>二重入力に時間が消える</h3>
+        <p>予約はA社、カルテは紙、売上はエクセル——同じ情報を何度も書き写す時間は、施術にもお客様対応にも使えたはずの時間です。</p>
+      </div>
+      <div class="risk-card reveal">
+        <div class="icon">🎲</div>
+        <h3>経営判断が勘頼みになる</h3>
+        <p>リピート率もキャンセル率も物販の動きも数字で見えないと、「なんとなく忙しい」「なんとなく不安」のまま打ち手が決まりません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 原因 ================= -->
+<section class="sec-cause">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">なぜ、予約システムを入れても解決しないのか？</h2>
+      <p class="sec-lead">実は、取りこぼしの原因は「システムが無いこと」ではありません。原因は2つに集約されます。</p>
+    </div>
+    <div class="cause-grid">
+      <div class="cause-card reveal">
+        <svg class="card-illust" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif" aria-hidden="true">
+          <rect width="400" height="190" rx="12" fill="#F0F6F6"/>
+          <!-- LINE chat -->
+          <rect x="30" y="26" width="150" height="138" rx="12" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+          <rect x="44" y="44" width="98" height="26" rx="13" fill="#D9EFDC"/>
+          <text x="54" y="62" fill="#2E7D46" font-size="11.5" font-weight="bold">次は金曜15時で</text>
+          <rect x="66" y="80" width="100" height="26" rx="13" fill="#EDF2F2"/>
+          <text x="76" y="98" fill="#4C6B67" font-size="11.5" font-weight="bold">お待ちしてます！</text>
+          <text x="44" y="150" fill="#4C6B67" font-size="12" font-weight="bold">トークでは約束済み</text>
+          <!-- broken link -->
+          <path d="M192 95 H222" stroke="#94A3A3" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 8"/>
+          <text x="196" y="82" fill="#D9534F" font-size="17" font-weight="bold">✕</text>
+          <!-- booking book -->
+          <rect x="238" y="26" width="132" height="138" rx="12" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+          <rect x="252" y="44" width="104" height="14" rx="7" fill="#DCE7E7"/>
+          <rect x="252" y="68" width="104" height="14" rx="7" fill="#DCE7E7"/>
+          <rect x="252" y="92" width="104" height="14" rx="7" fill="#FBE3C8" stroke="#F08A2E" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="266" y="103" fill="#D97A22" font-size="10" font-weight="bold">（空欄のまま…）</text>
+          <rect x="252" y="116" width="104" height="14" rx="7" fill="#DCE7E7"/>
+          <text x="252" y="150" fill="#4C6B67" font-size="12" font-weight="bold">台帳には入っていない</text>
+        </svg>
+        <span class="tag">原因 ①</span>
+        <h3>取りこぼしは、システムの"外側"で起きる</h3>
+        <p>予約システムを入れても、お客様との約束は公式LINEのトークで生まれます。<strong>人が手で書き写している限り、転記ミスと登録忘れは無くなりません。</strong>会話と台帳がつながっていないことが、取りこぼしの正体です。</p>
+      </div>
+      <div class="cause-card reveal">
+        <svg class="card-illust" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif" aria-hidden="true">
+          <rect width="400" height="190" rx="12" fill="#F0F6F6"/>
+          <!-- buried feature -->
+          <g opacity=".8">
+            <rect x="36" y="36" width="128" height="120" rx="10" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+            <rect x="50" y="52" width="100" height="12" rx="6" fill="#DCE7E7"/>
+            <rect x="50" y="74" width="100" height="12" rx="6" fill="#DCE7E7"/>
+            <rect x="50" y="96" width="100" height="12" rx="6" fill="#DCE7E7"/>
+            <rect x="50" y="118" width="72" height="12" rx="6" fill="#B9CFCF"/>
+            <text x="46" y="176" fill="#94A3A3" font-size="12" font-weight="bold">奥のメニューに埋もれたカルテ</text>
+          </g>
+          <text x="182" y="104" fill="#4C6B67" font-size="16" font-weight="bold">VS</text>
+          <!-- proactive list -->
+          <rect x="228" y="24" width="146" height="142" rx="12" fill="#0E2A38"/>
+          <rect x="242" y="40" width="86" height="20" rx="10" fill="#F08A2E"/>
+          <text x="250" y="54" fill="#fff" font-size="11" font-weight="bold">未記入 2件</text>
+          <rect x="242" y="72" width="118" height="26" rx="8" fill="rgba(255,255,255,.12)"/>
+          <rect x="242" y="106" width="118" height="26" rx="8" fill="rgba(255,255,255,.12)"/>
+          <text x="240" y="156" fill="#FCCB96" font-size="12" font-weight="bold">向こうから出てくる</text>
+        </svg>
+        <span class="tag">原因 ②</span>
+        <h3>機能があっても、探しに行く手間で止まる</h3>
+        <p>カルテも物販管理も「機能はあるのに使われない」が現場の実態です。忙しい日に奥の画面まで探しに行く余裕はありません。<strong>書くべきもの・提案すべきものが向こうから出てくる設計</strong>でなければ、続かないのです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 解決 ================= -->
+<section class="sec-solution on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">だから、サロンカルテは2つを同時にやります</h2>
+      <p class="sec-lead">「サロンカルテ」は、予約・電子カルテ・回数券・物販・公式LINEをひとつにまとめ、抜けたものをシステムが見つけて知らせる、院運営のためのシステムです。</p>
+    </div>
+    <div class="sol-grid" style="margin-top:20px">
+      <div class="sol-card reveal">
+        <span class="num">1</span>
+        <svg class="card-illust" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif" aria-hidden="true" style="margin-top:14px">
+          <rect width="400" height="190" rx="12" fill="#F0F6F6"/>
+          <!-- scattered items converge -->
+          <g font-size="11.5" font-weight="bold">
+            <rect x="26" y="22" width="76" height="30" rx="15" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+            <text x="44" y="42" fill="#4C6B67">予約</text>
+            <rect x="26" y="80" width="76" height="30" rx="15" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+            <text x="38" y="100" fill="#4C6B67">カルテ</text>
+            <rect x="26" y="138" width="76" height="30" rx="15" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+            <text x="41" y="158" fill="#4C6B67">物販</text>
+          </g>
+          <path d="M112 37 C150 37 150 88 182 92 M112 95 H182 M112 153 C150 153 150 100 182 96" stroke="#0E8388" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M176 84 L192 94 L176 104 Z" fill="#0E8388"/>
+          <!-- unified screen -->
+          <rect x="206" y="30" width="168" height="130" rx="14" fill="#0E2A38"/>
+          <rect x="222" y="48" width="70" height="12" rx="6" fill="rgba(255,255,255,.8)"/>
+          <rect x="222" y="72" width="136" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+          <rect x="222" y="90" width="136" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+          <rect x="222" y="108" width="104" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+          <rect x="222" y="130" width="88" height="18" rx="9" fill="#0E8388"/>
+          <text x="234" y="143" fill="#fff" font-size="10.5" font-weight="bold">入力は一度だけ</text>
+        </svg>
+        <h3>院の仕事を<span class="accent">ひとつの画面に</span></h3>
+        <p>予約を受けて、施術して、記録する。いつもの流れをなぞるだけで、顧客台帳・回数券・売上・次回提案までつながります。同じ情報を二度入力することはありません。</p>
+      </div>
+      <div class="sol-card reveal">
+        <span class="num">2</span>
+        <svg class="card-illust" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif" aria-hidden="true" style="margin-top:14px">
+          <rect width="400" height="190" rx="12" fill="#F0F6F6"/>
+          <!-- radar -->
+          <circle cx="120" cy="95" r="66" fill="rgba(14,131,136,.08)" stroke="#0E8388" stroke-width="2.5"/>
+          <circle cx="120" cy="95" r="38" fill="rgba(14,131,136,.10)" stroke="#0E8388" stroke-width="2" stroke-dasharray="6 5" opacity=".7"/>
+          <path d="M120 95 L172 58" stroke="#0E8388" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="120" cy="95" r="7" fill="#0E8388"/>
+          <!-- caught items -->
+          <g font-size="10.5" font-weight="bold">
+            <rect x="88" y="44" width="86" height="22" rx="11" fill="#F08A2E"/>
+            <text x="97" y="59" fill="#fff">LINE予約漏れ</text>
+            <rect x="62" y="120" width="92" height="22" rx="11" fill="#0E2A38"/>
+            <text x="71" y="135" fill="#fff">カルテ未記入</text>
+          </g>
+          <!-- to staff LINE -->
+          <path d="M212 95 H252" stroke="#F08A2E" stroke-width="4" stroke-linecap="round"/>
+          <path d="M246 85 L260 95 L246 105 Z" fill="#F08A2E"/>
+          <rect x="270" y="46" width="104" height="98" rx="14" fill="#fff" stroke="#CBDCDC" stroke-width="2"/>
+          <circle cx="292" cy="72" r="11" fill="#22B573"/>
+          <path d="M287 72 L291 77 L298 67" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="310" y="77" fill="#13343B" font-size="12" font-weight="bold">通知</text>
+          <rect x="284" y="94" width="76" height="9" rx="4.5" fill="#DCE7E7"/>
+          <rect x="284" y="110" width="58" height="9" rx="4.5" fill="#DCE7E7"/>
+          <text x="272" y="166" fill="#4C6B67" font-size="12" font-weight="bold">スタッフのLINEに届く</text>
+        </svg>
+        <h3>抜けたものは<span class="accent">機械が見つけて知らせる</span></h3>
+        <p>公式LINEのトークと予約表を1時間ごとに照合して予約漏れを検知。カルテの未記入は毎晩、物販の切れ時は毎朝、スタッフのLINEに届きます。「気をつける」を仕組みに置き換えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 機能 ================= -->
+<section class="sec-features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <h2 class="sec-title">院の1日をまるごと支える6つの機能</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="fico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+        <h3>予約管理・ネット予約</h3>
+        <p>二重予約はシステムが拒否。施術の前後に入れ替え時間を自動確保し、店舗をまたぐスタッフの掛け持ちにも対応。24時間のネット予約・担当者別URL・事前決済つき。</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="fico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+        <h3>電子カルテ（AI下書き）</h3>
+        <p>SOAP形式。未記入は一覧の最上部に並び、1タップでお客様・日付・担当が入った状態で開きます。メモ書きからAIが下書きを作成。毎晩、未記入件数をLINEでお知らせ。</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="fico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <h3>公式LINE連携</h3>
+        <p>トークの約束と台帳を1時間ごとに照合し、予約漏れを検知。枠が空いていれば「要確認」の仮予約を作成します。予約確定の自動送信・毎朝7時の予約一覧つき。</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="fico"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+        <h3>物販・そろそろ提案</h3>
+        <p>販売を記録すると、商品がなくなる頃を計算して「そろそろ提案リスト」に並びます。過去の購入履歴・買い直しの実績で精度が上がり、次の提案の一言が画面に出ます。</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="fico"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
+        <h3>顧客・回数券・失客アラート</h3>
+        <p>来店周期から次回予約の日時を自動提案。回数券の残数管理・残りわずか通知・返還にも対応。いつもより間隔が空いた方には失客アラートが出ます。</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="fico"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+        <h3>経営ダッシュボード・スタッフ教育</h3>
+        <p>予約の推移、スタッフ別売上、キャンセル率・無断キャンセルを1画面で。院内の教材から毎朝4択クイズが届くスタッフ学習機能、iPhone・Android対応のスタッフアプリつき。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 導入後 ================= -->
+<section class="sec-after">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">06</span>
+      <h2 class="sec-title">導入後、あなたの院はこう変わります</h2>
+    </div>
+    <div class="after-list">
+      <div class="after-item reveal">
+        <span class="no">1</span>
+        <div>
+          <h3>「写し忘れてないかな」の不安から解放されます</h3>
+          <p>LINEの約束はシステムが照合して拾い、二重予約はシステムが止めます。人の記憶力に頼る運用が終わります。</p>
+        </div>
+      </div>
+      <div class="after-item reveal">
+        <span class="no">2</span>
+        <div>
+          <h3>カルテと物販が「続く仕組み」になります</h3>
+          <p>書くべきカルテと提案すべき商品が、向こうから画面とLINEに出てきます。忙しい日でも、抜けたものが翌朝には見えています。</p>
+        </div>
+      </div>
+      <div class="after-item reveal">
+        <span class="no">3</span>
+        <div>
+          <h3>数字で経営を判断できるようになります</h3>
+          <p>リピート周期・キャンセル率・スタッフ別売上・物販の動きがダッシュボードに揃い、感覚ではなく数字で打ち手を決められます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="report-illust reveal" aria-hidden="true">
+      <svg viewBox="0 0 820 250" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif">
+        <rect width="820" height="250" rx="18" fill="#fff"/>
+        <text x="48" y="58" fill="#13343B" font-size="20" font-weight="bold">経営ダッシュボードで数字が見える</text>
+        <rect x="48" y="76" width="44" height="5" rx="2.5" fill="#F08A2E"/>
+        <!-- bar chart -->
+        <g>
+          <rect x="60" y="176" width="42" height="34" rx="6" fill="#DCE7E7"/>
+          <rect x="116" y="156" width="42" height="54" rx="6" fill="#C2D6D6"/>
+          <rect x="172" y="132" width="42" height="78" rx="6" fill="#FCCB96"/>
+          <rect x="228" y="104" width="42" height="106" rx="6" fill="#F08A2E"/>
+          <path d="M76 158 C130 140 190 118 246 84" stroke="#0E2A38" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M238 76 L254 80 L246 96 Z" fill="#0E2A38"/>
+          <text x="60" y="234" fill="#4C6B67" font-size="13">予約数の推移</text>
+        </g>
+        <!-- report sheet -->
+        <g>
+          <rect x="420" y="96" width="180" height="122" rx="12" fill="#F0F6F6" stroke="#DCE7E7" stroke-width="2"/>
+          <rect x="438" y="116" width="106" height="10" rx="5" fill="#C2D6D6"/>
+          <rect x="438" y="138" width="144" height="10" rx="5" fill="#DCE7E7"/>
+          <rect x="438" y="160" width="124" height="10" rx="5" fill="#DCE7E7"/>
+          <rect x="438" y="182" width="88" height="10" rx="5" fill="#DCE7E7"/>
+          <circle cx="576" cy="116" r="14" fill="#22B573"/>
+          <path d="M569 116 L574 122 L584 110" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="420" y="80" fill="#4C6B67" font-size="13" font-weight="bold">スタッフ別売上・歩合も自動集計</text>
+        </g>
+        <!-- KPI chips -->
+        <g font-weight="bold">
+          <rect x="628" y="96" width="156" height="54" rx="12" fill="#0E2A38"/>
+          <text x="644" y="118" fill="rgba(255,255,255,.75)" font-size="12">キャンセル率</text>
+          <text x="644" y="140" fill="#FCCB96" font-size="16">店舗別に毎日更新</text>
+          <rect x="628" y="164" width="156" height="54" rx="12" fill="#FDEEDC"/>
+          <text x="644" y="186" fill="#B25E14" font-size="12">判断は感覚でなく</text>
+          <text x="644" y="208" fill="#F08A2E" font-size="18">数字で。</text>
+        </g>
+      </svg>
+    </div>
+    <div class="center reveal" style="margin-top:44px">
+      <a class="btn btn--lg js-form-link" href="#" target="_blank" rel="noopener">まずは無料デモで画面を見てみる<span class="arrow">→</span></a>
+      <p class="btn-note">実際に動いているシステムを、オンラインでそのままお見せします</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 実測 ================= -->
+<section class="sec-results on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07</span>
+      <h2 class="sec-title">自社サロンの実運用で分かったこと</h2>
+      <p class="sec-lead">サロンカルテは、自社サロン（2店舗）を1号ユーザーとして、実運用しながら開発しています。机上の空論ではなく、現場で見つけた「本当の課題」から機能を作りました。</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="label">カルテ機能はあったのに、書かれた数は</div>
+        <div class="num" data-count="0">0<small> 件</small></div>
+        <p class="desc">本番稼働後の調査時点で、作成されたカルテはゼロでした。原因は「書く場所が奥にある」こと。未記入リストと夜のLINE通知を作ったところ、導入後2日間で8件が記入されました。</p>
+      </div>
+      <div class="result-card reveal">
+        <div class="label">1日の照合で見つかったLINE予約漏れ</div>
+        <div class="num">8<small> 件</small></div>
+        <p class="desc">公式LINEのトークと予約表を突き合わせたところ、「約束したのに台帳に無い」予約が1日で8件見つかりました。この照合を1時間ごとに自動で回しています。</p>
+      </div>
+    </div>
+    <p class="results-note reveal">※ いずれも自社サロン（2店舗）での実測値です。件数・改善の程度は運用状況によって異なり、すべての方に同じ結果をお約束するものではありません。</p>
+  </div>
+</section>
+
+<!-- ================= 08 安心 ================= -->
+<section class="sec-reason">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">08</span>
+      <h2 class="sec-title">安心してお任せいただける3つの理由</h2>
+    </div>
+    <div class="cards3">
+      <div class="reason-card reveal">
+        <span class="badge">1</span>
+        <h3>AIの自動処理は、必ず「要確認」で止まります</h3>
+        <p>AIが作る仮予約には印が付き、スタッフが確認するまで確定扱いにしません。AIの自動処理でお客様へメッセージが飛ぶことも一切ありません。連絡は必ず人が行います。</p>
+      </div>
+      <div class="reason-card reveal">
+        <span class="badge">2</span>
+        <h3>自社のサロンで、毎日使っています</h3>
+        <p>開発元の私たち自身が2店舗のサロンを運営し、サロンカルテで予約もカルテも物販も回しています。現場で不便が見つかれば、まず自分たちが困るので、すぐ直します。</p>
+      </div>
+      <div class="reason-card reveal">
+        <span class="badge">3</span>
+        <h3>データはお客様のものです</h3>
+        <p>解約時には予約・顧客情報・カルテをCSVでお渡しします。毎日の自動バックアップつき。「乗り換えたら人質に取られる」ことはありません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 料金 ================= -->
+<section class="sec-price on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">料金はシンプル。<span style="color:var(--orange-soft)">店舗数だけで決まります</span></h2>
+      <p class="sec-lead">どのプランも機能はすべて同じ。LINE予約漏れの検知も、物販の提案も、経営ダッシュボードも、全部入りです。サーバー代・アップデート費用は0円。表示はすべて税込です。</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card is-featured reveal">
+        <span class="pop">まずはここから</span>
+        <div class="pname">ライト</div>
+        <div class="pprice"><span class="yen">1万9,800円</span><span class="per"> /月（税込）</span></div>
+        <div class="pcap">1店舗・全機能込み</div>
+        <ul>
+          <li>予約管理・ネット予約</li>
+          <li>電子カルテ（AI下書き）</li>
+          <li>公式LINE連携・予約漏れ検知</li>
+          <li>物販・回数券・経営ダッシュボード</li>
+        </ul>
+      </div>
+      <div class="plan-card reveal">
+        <div class="pname">複数店舗</div>
+        <div class="pprice"><span class="yen">3万9,800円</span><span class="per"> /月（税込）</span></div>
+        <div class="pcap">3店舗まで</div>
+        <ul>
+          <li>ライトと同じ全機能</li>
+          <li>店舗をまたぐ予約表</li>
+          <li>スタッフの掛け持ち対応</li>
+          <li>店舗別レポート</li>
+        </ul>
+      </div>
+      <div class="plan-card reveal">
+        <div class="pname">グループ院</div>
+        <div class="pprice"><span class="yen">7万9,800円</span><span class="per"> /月（税込）</span></div>
+        <div class="pcap">5店舗以上</div>
+        <ul>
+          <li>ライトと同じ全機能</li>
+          <li>本部向け横断レポート</li>
+          <li>専任担当のサポート</li>
+          <li>導入時の店舗展開支援</li>
+        </ul>
+      </div>
+    </div>
+    <div class="price-notes reveal">
+      <span class="price-note-chip">初期費用 9万8,000円〜（税込）<small>データ移行・LINE接続・研修まで込み</small></span>
+      <span class="price-note-chip">最低契約 6ヶ月<small>以降は1ヶ月ごとの更新です</small></span>
+      <span class="price-note-chip">サーバー・更新費 0円<small>月額にすべて含まれます</small></span>
+    </div>
+    <p class="price-legal reveal">※ 表示はすべて税込価格です。初期費用は店舗数・移行データ量により変動します（お見積り無料）。上記にない店舗数の場合はお見積りでご案内します。</p>
+  </div>
+</section>
+
+<!-- ================= 09 FAQ ================= -->
+<section class="sec-faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">09</span>
+      <h2 class="sec-title">よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>今使っている予約システムから乗り換えられますか？<span class="toggle">＋</span></summary>
+        <div class="a">移行は弊社が代行します。既存の予約とお客様情報を移し替え、移行日まで現行システムをそのまま併用できます。切り替え当日に予約リンクを差し替えるだけなので、営業を止めずに移行できます。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>公式LINEの友だちは引き継げますか？<span class="toggle">＋</span></summary>
+        <div class="a">引き継げます。今お使いの公式LINEアカウントに予約の仕組みを接続する形なので、アカウントの作り直しは不要で、友だちもそのままです。店舗ごとにアカウントが分かれていても対応できます。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>スタッフがパソコンに不慣れでも使えますか？<span class="toggle">＋</span></summary>
+        <div class="a">予約表の確認・カルテ記入・休みの登録・店頭販売の記録は、iPhone・Android対応のスタッフアプリから操作できます。導入時に実際の画面を使った研修（約90分）を行い、開始後1ヶ月はチャットで随時ご質問にお答えします。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>AIが勝手に予約を入れてしまうことはありませんか？<span class="toggle">＋</span></summary>
+        <div class="a">ありません。AIが見つけた予約漏れは、枠が空いている場合のみ「要確認」の仮予約として作成され、スタッフが確認するまで確定扱いになりません。枠が埋まっている場合は通知だけを行います。また、AIの自動処理でお客様へメッセージが送られることは一切ありません。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>導入実績はどのくらいありますか？<span class="toggle">＋</span></summary>
+        <div class="a">現在は開発元の自社サロン（2店舗）での運用実績のみで、外部への提供はこれからです。その分、初期にご導入いただく院さまには、設定・移行・運用の定着まで手厚く伴走します。導入前に実際に動いている画面をすべてお見せしますので、まずは無料デモでご確認ください。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>他社の予約システムより高くないですか？<span class="toggle">＋</span></summary>
+        <div class="a">予約機能だけのシステムなら、もっと安いものもあります。ただ、電子カルテ・回数券・物販管理・LINE配信を別々のサービスで契約すると、合計で月4〜6万円になるのが一般的です。サロンカルテはそれらを1つにまとめた価格とお考えください。管理も支払いも1本になります。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>解約したらデータはどうなりますか？<span class="toggle">＋</span></summary>
+        <div class="a">予約・お客様情報・カルテをCSV形式でお渡しします。データはお客様のものです。なお、最低契約期間は6ヶ月で、以降は1ヶ月ごとの更新です。解約をご希望の場合は前月末日までにご連絡ください。</div>
+      </details>
+      <details class="faq reveal">
+        <summary><span class="q">Q</span>導入までどのくらいかかりますか？<span class="toggle">＋</span></summary>
+        <div class="a">お打ち合わせから運用開始まで、通常2週間ほどです。①お打ち合わせ（約60分）→②設定とデータ移行（3〜5営業日）→③スタッフ研修（約90分）の3ステップで、移行日まで現在の予約方法をそのまま使えます。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 最終CTA ================= -->
+<section class="sec-contact" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">まずはデモで、<br>“抜けが拾われる瞬間”を見てください。</h2>
+    <p class="lead reveal">「うちの規模でも合う？」「今のシステムから移せる？」——そんな素朴な疑問だけでも大歓迎です。実際に動いている画面をオンラインでお見せしながら、貴院の運用に合わせた使い方を無料でご提案します。</p>
+    <div class="form-steps reveal">
+      <span class="form-step"><span class="n">1</span>フォームに入力<br>（約1分）</span>
+      <span class="form-step sep">→</span>
+      <span class="form-step"><span class="n">2</span>デモの日程調整</span>
+      <span class="form-step sep">→</span>
+      <span class="form-step"><span class="n">3</span>オンラインで画面をご案内</span>
+    </div>
+    <div class="reveal">
+      <a class="btn btn--lg js-form-link" href="#" target="_blank" rel="noopener">無料デモを予約する（Googleフォーム）<span class="arrow">→</span></a>
+      <p class="btn-note btn-note--onDark">入力は約1分。しつこい営業は一切ありません</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <img class="footer-logo" src="assets/shittoru_logo.png" alt="株式会社しっとる ロゴ">
+      <span class="brand-tag" style="letter-spacing:.28em">院運営をひとつに</span>
+      <span class="brand-name" style="color:#fff">サロンカルテ</span>
+    </div>
+    <p class="addr">運営：株式会社しっとる<br>〒700-0901 岡山県岡山市北区本町6-36 第一セントラルビル4階</p>
+    <p class="footer-contact">お問い合わせ：<a href="mailto:shittoru.ad@gmail.com">shittoru.ad@gmail.com</a></p>
+    <nav class="footer-links">
+      <a href="https://ig-ads.s-toru.com/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+      <a href="https://ig-ads.s-toru.com/legal.html" target="_blank" rel="noopener">特定商取引法に基づく表記</a>
+      <a href="https://lp.s-toru.com/" target="_blank" rel="noopener">サービス一覧</a>
+    </nav>
+    <p class="trademark">※LINEはLINEヤフー株式会社の商標または登録商標です。当社はLINEヤフー株式会社の関連会社ではありません。</p>
+    <p class="copy">© 2026 Shittoru Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="float-cta">
+  <a class="btn js-form-link" href="#" target="_blank" rel="noopener">無料デモを予約する（1分で完了）</a>
+</div>
+
+<script>
+/* ======== 設定：申込フォームのURLはここを1箇所変えるだけ ======== */
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScQxGrWcsL7z5hQ7KLK3hqWy9I5c64KNhe9HicYCiDJB3c03Q/viewform";
+
+document.querySelectorAll(".js-form-link").forEach(a => { a.href = GOOGLE_FORM_URL; });
+
+/* ---- スクロール時のフェードイン ---- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
